@@ -1,0 +1,12 @@
+db:
+  image: mysql:latest
+  environment:
+    - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    - MYSQL_DATABASE=algalog
+    - MYSQL_USER=algalog
+    - MYSQL_PASSWORD=algalog
+  container_name: algalog_db
+  volumes:
+    - algalog-api:/var/lib/mysql
+  ports:
+    - "3306:3306"
